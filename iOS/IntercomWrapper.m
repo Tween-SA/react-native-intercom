@@ -1,11 +1,3 @@
-//
-//  IntercomWrapper.m
-//  Made
-//
-//  Created by Asa Miller on 7/9/15.
-//  Copyright (c) 2015 Asa Miller. All rights reserved.
-//
-
 #import "IntercomWrapper.h"
 #import <Intercom/Intercom.h>
 
@@ -51,7 +43,7 @@ RCT_EXPORT_METHOD(reset:(RCTResponseSenderBlock)callback) {
     NSLog(@"reset");
 
     dispatch_async(dispatch_get_main_queue(), ^{
-        [Intercom reset];
+        [Intercom logout];
     });
 
     callback(@[[NSNull null]]);
@@ -61,7 +53,7 @@ RCT_EXPORT_METHOD(reset:(RCTResponseSenderBlock)callback) {
 RCT_EXPORT_METHOD(updateUser:(NSDictionary*)options callback:(RCTResponseSenderBlock)callback) {
     NSLog(@"updateUser with %@", options);
     NSDictionary* attributes = options;
-    [Intercom updateUserWithAttributes:attributes];
+    [Intercom updateUser:attributes];
     callback(@[[NSNull null]]);
 };
 
@@ -187,10 +179,11 @@ RCT_EXPORT_METHOD(registerForPush:(RCTResponseSenderBlock)callback) {
 };
 
 // Available as NativeModules.IntercomWrapper.setHMAC
+/*
 RCT_EXPORT_METHOD(setHMAC:(NSString*)hmac data:(NSString*)data callback:(RCTResponseSenderBlock)callback) {
     [Intercom setHMAC:hmac data:data];
     callback(@[[NSNull null]]);
 };
-
+*/
 
 @end
