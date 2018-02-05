@@ -1,4 +1,4 @@
-# react-native-intercom
+# react-native-intercom-tween
 React Native wrapper for Intercom.io. Based off of [intercom-cordova](https://github.com/intercom/intercom-cordova)
 
 ## Install
@@ -6,7 +6,7 @@ React Native wrapper for Intercom.io. Based off of [intercom-cordova](https://gi
 
 ### IOS
 
-1. `npm install react-native-intercom`
+1. `npm install react-native-intercom-tween`
 
 #### RNPM
 
@@ -16,7 +16,7 @@ Run `rnpm link`
 
 Add the following to your podfile
 
-    Pod 'react-native-intercom', :path => '../node_modules/react-native-intercom'
+    Pod 'react-native-intercom-tween', :path => '../node_modules/react-native-intercom-tween'
 
 #### Manual
 
@@ -63,7 +63,7 @@ Usage
 =====
 ### Require the module
 ```javascript
-var Intercom = require('react-native-intercom');
+var Intercom = require('react-native-intercom-tween');
 ```
 
 ### Log an event
